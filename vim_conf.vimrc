@@ -19,9 +19,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " python complement
 Plugin 'pythoncomplete'
-" Bundle 'Valloric/YouCompleteMe'
 Bundle 'Valloric/ListToggle'
-"Bundle 'scrooloose/syntastic'
 " 左侧导航栏
 Bundle 'vim-scripts/The-NERD-tree'
 " 标签导航
@@ -77,6 +75,10 @@ filetype plugin on
 " charset
 set enc=utf8
 set fencs=utf8,gbk,gb2312,gb18030,cp936
+" 对于不可见字符的特殊处理
+set list
+" 显示Tab符，使用一高亮竖线代替
+set listchars=tab:\|\ ,
 
 " python
 filetype plugin indent on
