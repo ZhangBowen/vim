@@ -58,6 +58,8 @@ set backspace=2     " more powerful backspacing
 au BufWrite /private/tmp/crontab.* set nowritebackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
+" 智能缩进
+set autoindent
 " show line number
 set nu
 " set tab = 4 spaces
@@ -157,7 +159,7 @@ func SetTitle()
         call SetComment_sh()
 
     elseif &filetype == 'python'
-        call setline(1,"#!/usr/bin/env bash")   
+        call setline(1,"#!/usr/bin/env python")   
         call setline(2,"#coding=u8")  
         call SetComment_sh()
           
